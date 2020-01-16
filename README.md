@@ -21,7 +21,7 @@ This is a complete binding of the [SQLite3](http://sqlite.org/) library
 1. Download SQLite3 DLL from https://sqlite.org/download.html such as:
     - sqlite-dll-win32-x86-3300100.zip (32bit for MT4)
     - sqlite-dll-win64-x64-3300100.zip (64bit for MT5)
-2. Extract and place "sqlite3.dll" in your MT4/MT5 "Library" folder.
+2. Extract and place "sqlite3.dll" in your MT4/MT5 "Libraries" folder.
 
 ### Getting Source code
 
