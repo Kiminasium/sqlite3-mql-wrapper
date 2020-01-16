@@ -18,14 +18,14 @@ This is a complete binding of the [SQLite3](http://sqlite.org/) library
 
 ### Getting DLL
 
-1. Download Windows DLL from https://sqlite.org/download.html such as:
+1. Download SQLite3 DLL from https://sqlite.org/download.html such as:
     - sqlite-dll-win32-x86-3300100.zip (32bit for MT4)
     - sqlite-dll-win64-x64-3300100.zip (64bit for MT5)
 2. Extract and place "sqlite3.dll" in your MT4/MT5 "Library" folder.
 
 ### Getting Source code
 
-1. Download the source code from https://github.com/kiminasium/sqlite3-mql.git
+1. Download the source code from https://github.com/Kiminasium/sqlite3-mql-wrapper.git
 2. Place "SQL" folder in your MT4/MT5 "Include" folder.
 
 ## Example
