@@ -158,4 +158,4 @@ int OnInit()
 
 - Just tested only the Example APIs. I'm not sure if other APIs work.
 - Easily use and test SQLite3 wrapper APIs, so check for yourself and add functions to "SQL.mqh".
-- Even with MT4, the library could be faster than https://github.com/Shmuma/sqlite3-mt4-wrapper
+- Even with MT4, the library may be faster processing than https://github.com/Shmuma/sqlite3-mt4-wrapper
