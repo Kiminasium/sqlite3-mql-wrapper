@@ -2,12 +2,12 @@
 
 SQLite3 binding for the MQL language (both 32bit MT4 and 64bit MT5)
 
-The library is for the Latest 2020 MT4 and MT5 users who are using:
+The library is for the latest 2020 MT4 and MT5 users who are using:
 
 - https://github.com/Shmuma/sqlite3-mt4-wrapper
-    * Only for 32bit DLL and 6 years ago. It dosen't work on MT5.
+    * Only for 32bit MT4 and 6 years ago. It dosen't work on MT5.
 - https://github.com/dingmaotu/mql-sqlite3
-    * Unfamiliar to sqlite3-mt4-wrapper users. Sometimes didn't work properly.
+    * Unfamiliar to sqlite3-mt4-wrapper users. Sometimes dosen't work properly.
 
 ## Introduction
 
