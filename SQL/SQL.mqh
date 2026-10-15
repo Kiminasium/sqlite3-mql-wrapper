@@ -251,8 +251,6 @@ int SQL::sqlite_set_busy_timeout(int millis) {
 
 /**
  * @sqlite_begin
- * Start a transaction. Many inserts/updates between sqlite_begin()
- * and sqlite_commit() are written to the disk at once, so it is much faster.
  */
 bool SQL::sqlite_begin() {
 
