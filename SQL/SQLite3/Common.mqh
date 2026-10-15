@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Kimihiko Hirano
+// Copyright (c) 2019 kiminasium
 // Released under the MIT license
 // Orig: https://github.com/dingmaotu/mql-sqlite3/blob/master/LICENSE
 //+------------------------------------------------------------------+

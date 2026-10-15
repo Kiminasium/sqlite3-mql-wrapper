@@ -1,6 +1,6 @@
-// Copyright (c) 2019 Kimihiko Hirano
+// Copyright (c) 2019 kiminasium
 // Released under the MIT license
-#property copyright "Copyright 2019,Kimihiko Hirano"
+#property copyright "Copyright 2019,kiminasium"
 #property link      ""
 #property version   "1.00"
 #property strict
@@ -38,6 +38,10 @@ public:
     void sqlite_free_query(void* handle);
     bool sqlite_table_exists(string table_name);
     int sqlite_get_col_count(void* handle);
+    int sqlite_set_busy_timeout(int millis);
+    bool sqlite_begin();
+    bool sqlite_commit();
+    bool sqlite_rollback();
 };
 
 /**
@@ -235,5 +239,39 @@ int SQL::sqlite_get_col_count(void* handle) {
 
     if (handle == NULL) return 0;
     return ((Statement *)handle).getColumnCount();
+}
+
+/**
+ * @sqlite_set_busy_timeout
+ */
+int SQL::sqlite_set_busy_timeout(int millis) {
+
+    return (db_.setBusyTimeout(millis));
+}
+
+/**
+ * @sqlite_begin
+ * Start a transaction. Many inserts/updates between sqlite_begin()
+ * and sqlite_commit() are written to the disk at once, so it is much faster.
+ */
+bool SQL::sqlite_begin() {
+
+    return sqlite_exec("begin transaction");
+}
+
+/**
+ * @sqlite_commit
+ */
+bool SQL::sqlite_commit() {
+
+    return sqlite_exec("commit transaction");
+}
+
+/**
+ * @sqlite_rollback
+ */
+bool SQL::sqlite_rollback() {
+
+    return sqlite_exec("rollback transaction");
 }
 //------------------------------------------------------------------------------

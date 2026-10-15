@@ -154,6 +154,30 @@ int OnInit()
 2020.01.15 22:29:23.890	SQLiteTest (USDJPY,M5)	a = 77777  
 2020.01.15 22:29:23.890	SQLiteTest (USDJPY,M5)	b = XXXXX  
 
+### Transaction
+
+Without a transaction, SQLite writes to the disk on every insert/update.
+Wrap many writes in sqlite_begin() and sqlite_commit() to make them much faster.
+
+```MQL5
+    if (!sql_.sqlite_begin()) {
+        return INIT_FAILED;
+    }
+
+    for (int i = 0; i < 1000; i++) {
+        string query = "insert into test values (" + IntegerToString(i) + ", 'ABCDE')";
+
+        if (!sql_.sqlite_exec(query)) {
+            sql_.sqlite_rollback();
+            return INIT_FAILED;
+        }
+    }
+
+    if (!sql_.sqlite_commit()) {
+        return INIT_FAILED;
+    }
+```
+
 ## Note
 
 - Just tested only the Example APIs. I have not tested any other SQLite3 wrapper APIs.
